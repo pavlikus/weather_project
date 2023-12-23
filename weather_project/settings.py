@@ -29,6 +29,7 @@ class Base(Configuration):
         "django.contrib.messages",
         "django.contrib.staticfiles",
         "rest_framework",
+        "weather",
     ]
 
     MIDDLEWARE: list[str] = [
