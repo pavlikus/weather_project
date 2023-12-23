@@ -1,0 +1,17 @@
+*.log
+*.pot
+*.pyc
+
+.coverage
+.env
+.idea
+.vscode
+
+__pycache__
+
+db.sqlite3
+db.sqlite3-journal
+
+media/
+static/
+templates/
