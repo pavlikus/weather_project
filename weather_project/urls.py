@@ -3,8 +3,11 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 
+from weather.views import CityAPIView
+
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/v1/weather/", CityAPIView.as_view(), name="weather"),
 ]
 
 if settings.DEBUG:
