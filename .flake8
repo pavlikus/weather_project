@@ -1,0 +1,5 @@
+[flake8]
+max_line_length = 79
+exclude = .git, __pycache__, migrations
+max-cognitive-complexity = 4
+max-complexity = 4
