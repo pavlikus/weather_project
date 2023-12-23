@@ -27,7 +27,7 @@ show-fixes = true
 target-version = "py311"
 
 [per-file-ignores]
-"*_tests.py" = ["ANN", "B", "S"]
+"**/tests/*.py" = ["ANN", "B", "PLR", "S"]
 "**/migrations/*.py" = ["E"]
 
 [mccabe]
