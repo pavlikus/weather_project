@@ -115,6 +115,18 @@ class Base(Configuration):
 
     DEFAULT_AUTO_FIELD: str = "django.db.models.BigAutoField"
 
+    # Weather API
+    API_CACHE_TIME = 60 * 30  # 30 minutes, 1800 seconds
+
+    # Yandex Weather API
+    YANDEX_WEATHER_API_KEY = SecretValue(
+        environ_prefix="", environ_required=True
+    )
+    YANDEX_WEATHER_API_ENDPOINT: str = (
+        "https://api.weather.yandex.ru/v2/forecast/"
+    )
+    YANDEX_WEATHER_API_HEADER: str = "X-Yandex-API-Key"
+
 
 class Development(Base):
     INSTALLED_APPS: list[str] = [
@@ -139,6 +151,13 @@ class Test(Base):
                 "timeout": 30,
             },
         },
+    }
+
+    CACHES = {
+        "default": {
+            "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+            "LOCATION": "unique-snowflake",
+        }
     }
 
     STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
