@@ -23,7 +23,7 @@ pip install -r requirements/production.txt
 ```
 Create DB structure
 ```bash
-python manage.py makemigations
+python manage.py migrate
 ```
 Install russian cities dataset
 ```bash
