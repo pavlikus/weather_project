@@ -127,6 +127,9 @@ class Base(Configuration):
     )
     YANDEX_WEATHER_API_HEADER: str = "X-Yandex-API-Key"
 
+    # Telegram Bot API
+    TELEGRAM_BOT_TOKEN = SecretValue(environ_prefix="", environ_required=True)
+
 
 class Development(Base):
     INSTALLED_APPS: list[str] = [
