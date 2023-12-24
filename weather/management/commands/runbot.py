@@ -17,7 +17,7 @@ class Command(BaseCommand):
             msg = bot.send_message(
                 message.chat.id,
                 (
-                    "Welcome to Weather Forecast bot."
+                    "Welcome to Weather Forecast bot. "
                     "Please enter your city"
                     "(only Russian city and letters allowed)?"
                 ),
