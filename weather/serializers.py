@@ -4,7 +4,7 @@ from rest_framework.fields import SerializerMethodField
 from rest_framework.serializers import ModelSerializer
 
 from .models import City
-from weather.provider.yandex import YandexWeatherProvider
+from .provider.yandex import YandexWeatherProvider
 
 
 class CitySerializer(ModelSerializer):
