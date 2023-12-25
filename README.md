@@ -3,6 +3,7 @@
 Service for getting weather data
 
 ## Instruction
+Required **python>=11**
 First of all you need clone this project and create environment.
 ```bash
 git clone https://github.com/pavlikus/weather_project
